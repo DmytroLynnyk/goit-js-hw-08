@@ -10,8 +10,6 @@ player.on(
 );
 
 player.on('loaded', function () {
-  const timeCode = JSON.parse(
-    localStorage.getItem('videoplayer-current-time')
-  ) ?? { seconds: 0 };
+  const timeCode = JSON.parse(localStorage.getItem('videoplayer-current-time'));
   player.setCurrentTime(timeCode.seconds);
 });
